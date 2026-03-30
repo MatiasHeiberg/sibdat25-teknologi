@@ -1,0 +1,59 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "templater-obsidian:docs/templates/update_draft.md",
+      "icon": "lucide-hammer",
+      "name": "Build draft (Alt+B)",
+      "mode": "any"
+    },
+    {
+      "id": "obsidian-citation-plugin:insert-markdown-citation",
+      "icon": "lucide-quote",
+      "name": "Insert citation (Alt+C)",
+      "mode": "any"
+    },
+    {
+      "id": "switcher:open",
+      "icon": "lucide-file-search",
+      "name": "Open quick switcher (Ctrl+O)",
+      "mode": "any"
+    },
+    {
+      "id": "command-palette:open",
+      "icon": "lucide-code-xml",
+      "name": "Open command palette (Ctrl+P)",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": [
+      "Templater",
+      "Create new base",
+      "Open quick switcher",
+      "Open command palette"
+    ]
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

@@ -1,0 +1,24 @@
+# --- C# & Visual Studio ---
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# --- VS Code ---
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+
+# --- Obsidian (Blacklist Strategy) ---
+# Vi inkluderer alt i .obsidian som standard, men udelukker lokal maskincache
+.obsidian/cache/
+.obsidian/backlink-cache/
+
+# --- Obsidian junk ---
+**/.trash/
+
+# --- OS Junk ---
+.DS_Store
+Thumbs.db
