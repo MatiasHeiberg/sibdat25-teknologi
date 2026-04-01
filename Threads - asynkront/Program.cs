@@ -1,13 +1,17 @@
-﻿namespace Threads___asynkront
+﻿using System.Diagnostics;
+
+namespace Threads___asynkront
 {
     internal class Program
     {
         private bool _controller = true;
+        private static int state = 5;
         static void Main(string[] args)
         {
             //Program.Opgave1();
             //Program.Opgave2();
-            Program.Opgave3();
+            //Program.Opgave3();
+            Program.Opgave4();
         }
         public static void Opgave1()
         {
@@ -95,5 +99,33 @@
             void M1() { while (true) Console.WriteLine('.'); }
             void M2() { for (int i = 0; i < 1000; i++) Console.WriteLine('x'); }
         }
+
+        public static void Opgave4()
+        {
+            // State er en delt ressource
+            // Opretter og starter 2 tråde
+            for (int i = 0; i < 2; i++)
+            {
+                Thread t = new Thread(RunMe);
+                t.Start();
+            }
+
+            static void RunMe()
+            {
+                int i = 0;
+                while (true)
+                {
+                    if (state == 5)
+                    {
+                        state++;
+                        Trace.Assert(state == 6, "Race condition in loop " + i);
+                    }
+                    state = 5;
+                    i++;
+                }
+            }
+        }
+
+        
     }
 }
