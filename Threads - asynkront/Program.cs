@@ -6,7 +6,8 @@
         static void Main(string[] args)
         {
             //Program.Opgave1();
-            Program.Opgave2();
+            //Program.Opgave2();
+            Program.Opgave3();
         }
         public static void Opgave1()
         {
@@ -79,6 +80,20 @@
             }
             
 
+        }
+
+        public static void Opgave3()
+        {
+            // Ved at lade T1 være en background thread lukker den ned når main thread stopper. Hvilket den gør når dens call stack er tom => efter M2 er færdig.
+            Thread T1 = new Thread(() => M1());
+            Thread T2 = new Thread(() => M2());
+
+            T1.IsBackground = true;
+            T1.Start();
+            T2.Start();
+
+            void M1() { while (true) Console.WriteLine('.'); }
+            void M2() { for (int i = 0; i < 1000; i++) Console.WriteLine('x'); }
         }
     }
 }
