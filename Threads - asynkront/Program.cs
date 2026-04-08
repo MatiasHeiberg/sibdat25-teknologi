@@ -11,7 +11,8 @@ namespace Threads___asynkront
             //Program.Opgave1();
             //Program.Opgave2();
             //Program.Opgave3();
-            Program.Opgave4();
+            //Program.Opgave4();
+            PetersonAlgo.RunAlgoMutex();
         }
         public static void Opgave1()
         {
